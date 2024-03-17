@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head class="scroll-auto">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+.hazem {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 55%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.hazem svg {
+    position: relative;
+    display: block;
+    width: calc(105% + 1.3px);
+}
+
+
+.custom-shape-divider-bottom-1708696219 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1708696219 svg {
+    position: relative;
+    display: block;
+    width: calc(88% + 1.3px);
+    transform: rotateY(180deg);
+}
+
+
+.custom-shape-divider-top-1709748522 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1709748522 svg {
+    position: relative;
+    display: block;
+    width: calc(120% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-top-1709748522 .shape-fill {
+    fill: #FFFFFF;
+}
+
+    </style>
+<script> configObj = {"buttonD":"M8 17.333h5.333v4C13.333 22.806 14.527 24 16 24c1.473 0 2.667-1.194 2.667-2.667v-4H24L16 8l-8 9.333z","buttonT":"translate(-1088 -172) translate(832 140) translate(32 32) translate(224)","shadowSize":"none","roundnessSize":"14px","buttonDToBottom":"18px","buttonDToRight":"18px","selectedBackgroundColor":"#f8971c","selectedIconColor":"#0f172a","buttonWidth":"40px","buttonHeight":"40px","svgWidth":"32px","svgHeight":"32px"};
+function createButton(obj, pageSimulator) {    const body = document.querySelector("body");
+    backToTopButton = document.createElement("span");
+        backToTopButton.classList.add("softr-back-to-top-button"); 
+           backToTopButton.id = "softr-back-to-top-button"; 
+              pageSimulator      ? pageSimulator.appendChild(backToTopButton)      : body.appendChild(backToTopButton);
+                  backToTopButton.style.width = obj.buttonWidth;    backToTopButton.style.height = obj.buttonHeight;
+                      backToTopButton.style.marginRight = obj.buttonDToRight;    backToTopButton.style.marginBottom = obj.buttonDToBottom;
+                          backToTopButton.style.borderRadius = obj.roundnessSize;    backToTopButton.style.boxShadow = obj.shadowSize;
+                              backToTopButton.style.color = obj.selectedBackgroundColor;    backToTopButton.style.backgroundColor = obj.selectedBackgroundColor;
+                                  pageSimulator ? backToTopButton.style.position = "absolute" : backToTopButton.style.position = "fixed";
+                                      backToTopButton.style.outline = "none";    backToTopButton.style.bottom = "0px";
+                                         backToTopButton.style.right = "0px";    backToTopButton.style.cursor = "pointer"; 
+                                            backToTopButton.style.textAlign = "center";    backToTopButton.style.border = "solid 2px currentColor";  
+                                              backToTopButton.innerHTML =      '<svg class="back-to-top-button-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" > <g fill="none" fill-rule="evenodd"> <path d="M0 0H32V32H0z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> <path class="back-to-top-button-img" fill-rule="nonzero" d="M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> </g> </svg>';    backToTopButtonSvg = document.querySelector(".back-to-top-button-svg");    backToTopButtonSvg.style.verticalAlign = "middle";    backToTopButtonSvg.style.margin = "auto";    backToTopButtonSvg.style.justifyContent = "center";    backToTopButtonSvg.style.width = obj.svgWidth;    backToTopButtonSvg.style.height = obj.svgHeight;    backToTopButton.appendChild(backToTopButtonSvg);    backToTopButtonImg = document.querySelector(".back-to-top-button-img");    backToTopButtonImg.style.fill = obj.selectedIconColor;    backToTopButtonSvg.appendChild(backToTopButtonImg);    backToTopButtonImg.setAttribute("d", obj.buttonD);    backToTopButtonImg.setAttribute("transform", obj.buttonT);        if(!pageSimulator) {      backToTopButton.style.display = "none";      window.onscroll = function() {        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {          backToTopButton.style.display = "block";        } else {          backToTopButton.style.display = "none";        }      };        backToTopButton.onclick = function() {        document.body.scrollTop = 0;        document.documentElement.scrollTop = 0;      };    }  };document.addEventListener("DOMContentLoaded", function() { createButton(configObj, null); });
+</script>
+</head>
+<body>
+    
+    <!-- header of the nav bar -->
+    <header class="border-b-[2px] border-logo fixed z-50 bg-white w-full">
+        <nav class="2xl:container 2xl:mx-auto mx-4 flex justify-between text-slate-800 h-[80px] md:h-[90px]">
+            <div class="flex items-center"> <img src="photos/logo2.png" class="w-[160px] sm:w-[250px] sm:min-w-[180px]"> </div>   
+            <div class="hidden mylg:flex mylg:items-center 2xl:space-x-6 mylg:mx-2 mylg:space-x-4 font-bold font-sans text-slate-900 text-lg">
+                    <a class="hover:bg-logo hover:text-white hover:py-3 sm:py-1 hover:px-6 hover:rounded-full transition-all flex items-center" href="#">Pools & Spas
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 m-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                          </svg>                          
+                      </a>
+                    <a class="hover:bg-logo hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">Gallery</a>
+                    <a class="flex itemes-center hover:bg-logo hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">About Us
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class=" w-5 m-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                          </svg>  
+                    </a>
+                    <a class="hover:bg-logo hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">Testimonials</a>
+                    <a class="flex items-center hover:bg-logo hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">Resouces
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 m-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                          </svg>  
+                    </a>
+            </div>
+            <div class="hidden mylg:flex justify-between xl:ml-0">
+                <div class="flex items-center text-slate-100 font-sans font-bold px-3 text-lg border border-logo rounded-sm bg-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 mr-2">
+                        <path fill-rule="evenodd" d="M19.5 9.75a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 1 1.5 0v2.69l4.72-4.72a.75.75 0 1 1 1.06 1.06L16.06 9h2.69a.75.75 0 0 1 .75.75Z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
+                      </svg>                      
+                   01147005858 </div>
+                <div class="flex flex-col items-center justify-center">
+                    <div class="font-sans font-bold text-slate-700 pb-1"> Find a Builder</div>
+                    <div><button class="flex items-center ml-2 py-2 px-6 border-2 border-logo rounded-full font-bold text-sm text-center hover:bg-logo hover:text-white hover:border-2 hover:border-orange-300 transition-all" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class=" w-6 mr-1 2xl:-ml-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg> Find a Builder
+                      </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mylg:hidden flex items-center justify-between">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-[35px] sm:w-[50px]">
+                    <path fill-rule="evenodd" d="M3 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 5.25Zm0 4.5A.75.75 0 0 1 3.75 9h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                  </svg>
+                  
+            </div>
+        </nav>
+    </header>
+    
+    <!-- hero section -->
+    <div class="relative pt-[80px]">
+
+        <div class="absolute text-center flex-col flex items-center justify-center w-full h-[68%] sm:h-[75%] space-y-1 sm:space-y-3 mylg:space-y-5">
+            <h1 class="text-white text-lg sm:text-4xl font-extrabold mylg:text-6xl mx-1">Bring Your Dream Pool To Life</h1>
+            <h2 class="text-white sm:text-xl font-bold mylg:text-4xl">By Stormy Pools</h2>
+            <button class="text-white py-1/2 text-[12px] px-2 font-semibold mylg:text-xl bg-logo rounded-xl transition-all hover:bg-logo2 sm:text-[12px] sm:py-1 sm:px-3 mylg:py-2 mylg:px-5">Get FREE Quote</button>
+
+        </div>
+
+        <img class=" w-full bottom-0 z-10 object-cover h-[220px] sm:h-full" src="photos/hero2.png">
+        <div class="hazem z-20 ">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="fill-logo"></path>
+            </svg>
+        </div> 
+        <div class="custom-shape-divider-bottom-1708696219">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-logo"></path>
+            </svg>
+        </div>
+        <div class="absolute overflow-hidden bottom-0 left-0 w-full rotate-180 z-30 ">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="block fill-white"></path>
+            </svg>
+        </div>
+    </div>
+    
+    <!-- under hero -->
+    <div class="mx-2 flex flex-col items-center space-y-3 md:container md:mx-auto md:flex-row md:justify-evenly md:space-y-6 pt-6">
+        <div class="md:max-w-[45%] space-y-3 mylg:space-y-8 flex flex-col items-center text-center md:items-start md:text-start">
+            <h1 class="text-slate-900 font-bold text-xl md:text-3xl mylg:text-5xl font-sans">Welcome to Stormy Pools</h1>
+            <h2 class="text-slate-800 font-sans text-sm md:text-base mylg:text-xl">
+                With over 50 years of experience, Stormy Pools has become an iconic brand.
+                Our commitment to manufacturing quality fibreglass swimming pools and delivering the best and most loved client experiences sets us apart.
+                <br><br>
+                Stormy Pools are the quintessential client-centric business where our client is truly at the core of everything we do. We are committed to delivering the world’s best and most loved client experiences. Most notably, Stormy Pools’
+                success is thanks to our incredible network of passionate and local, qualified pool builders who love bringing their client’s dreams to life.
+            </h2>
+            <button class="px-2 py-1 w-36 md:w-[184px] mylg:w-52 md:px-4 md:py-2 bg-white text-slate-900 font-bold text-md md:text-xl mylg:text-2xl rounded-xl border-2 border-slate-900 flex items-center hover:bg-slate-100 transition-all">
+                Watch Video
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class=" h-6 ml-1 mt-1  text-logo">
+                    <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                  </svg>
+                  
+            </button>
+        </div>
+        <div class=" md:max-w-[45%]">
+            <img class="rounded-3xl shadow-xl w-full h-full object-cover" src="photos/2.jpg">
+        </div>
+    </div>
+
+    <!-- divider -->
+    <div class="mydivider"></div>
+    <!-- divider -->
+
+    <!-- credits -->
+    <div class=" bg-slate-100 w-full space-y-5 md:space-y-10 flex flex-col items-center justify-evenly">
+        
+        <div class="md:container md:mx-auto h-[30%] flex justify-center items-center pt-[3%]">
+            <h1 class="text-lg mx-2 font-bold font-sans text-center text-slate-900 md:text-2xl mylg:text-3xl sm:w-[55%]">We bring dreams to life by delivering the world’s best and most loved client experiences.</h1>
+        </div>
+        
+        <div class="container mx-auto pb-[3%]">
+            <div class="grid grid-cols-2 mx-2 gap-x-2 gap-y-2 md:gap-y-4 md:grid-cols-4 mylg:gap-x-8 text-center h-full">
+
+                <div class="flex flex-col items-center justify-start space-y-1 md:space-y-3 bg-white rounded-3xl py-[5%] px-[5%] shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 md:w-12 md:h-12">
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM8.547 4.505a8.25 8.25 0 1 0 11.672 8.214l-.46-.46a2.252 2.252 0 0 1-.422-.586l-1.08-2.16a.414.414 0 0 0-.663-.107.827.827 0 0 1-.812.21l-1.273-.363a.89.89 0 0 0-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.211.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 0 1-1.81 1.025 1.055 1.055 0 0 1-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.654-.261a2.25 2.25 0 0 1-1.384-2.46l.007-.042a2.25 2.25 0 0 1 .29-.787l.09-.15a2.25 2.25 0 0 1 2.37-1.048l1.178.236a1.125 1.125 0 0 0 1.302-.795l.208-.73a1.125 1.125 0 0 0-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 0 1-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 0 1-1.458-1.137l1.279-2.132Z" clip-rule="evenodd" />
+                      </svg>
+                      <h1 class="font-bold  md:text-lg mylg:text-xl font-serif">African Made</h1>
+                      <p class="text-sm md:text-base">Handcrafted with care for your family in our state-of-the-art facility in NSW and QLD.</p>     
+                </div>
+                
+                <div class="flex flex-col items-center justify-start space-y-1 md:space-y-3 bg-white rounded-3xl py-[5%] px-[5%] shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 md:w-12 md:h-12">
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-2.625 6c-.54 0-.828.419-.936.634a1.96 1.96 0 0 0-.189.866c0 .298.059.605.189.866.108.215.395.634.936.634.54 0 .828-.419.936-.634.13-.26.189-.568.189-.866 0-.298-.059-.605-.189-.866-.108-.215-.395-.634-.936-.634Zm4.314.634c.108-.215.395-.634.936-.634.54 0 .828.419.936.634.13.26.189.568.189.866 0 .298-.059.605-.189.866-.108.215-.395.634-.936.634-.54 0-.828-.419-.936-.634a1.96 1.96 0 0 1-.189-.866c0-.298.059-.605.189-.866Zm2.023 6.828a.75.75 0 1 0-1.06-1.06 3.75 3.75 0 0 1-5.304 0 .75.75 0 0 0-1.06 1.06 5.25 5.25 0 0 0 7.424 0Z" clip-rule="evenodd" />
+                      </svg>
+                      
+                      <h1 class="font-bold  md:text-lg mylg:text-xl  font-serif">Family Owned</h1>
+                      <p class="text-sm md:text-base">Our network of local pool builders across NSW, ACT, VIC, SA & QLD are professional and family-owned – they’ll work with you every step of the way.</p>     
+                </div>
+                
+                <div class="flex flex-col items-center justify-start space-y-1 md:space-y-3 bg-white rounded-3xl py-[5%] px-[5%] shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 md:w-12 md:h-12">
+                        <path fill-rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                      </svg>
+                      
+                      <h1 class="font-bold  md:text-lg mylg:text-xl font-serif">Lifetime Warranty</h1>
+                      <p class="text-sm md:text-base">Peace of mind with our lifetime structural inground warranty.</p>     
+                </div>
+
+                <div class="flex flex-col items-center justify-start space-y-1 md:space-y-3 bg-white rounded-3xl py-[5%] px-[5%] shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 md:w-12 md:h-12">
+                        <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                        <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clip-rule="evenodd" />
+                      </svg>
+                      
+                      <h1 class="font-bold  md:text-lg mylg:text-xl font-serif">Expertise & Experience</h1>
+                      <p class="text-sm md:text-base">With over 50 years of innovation, research and development to create a world-class pool shell.</p>     
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+  
+    <!-- divider -->
+    <div class="mydivider"></div>
+    <!-- divider -->
+
+
+    <!-- contact section -->
+    <div class="sm:container sm:mx-auto md:flex-row md:items-center md:py-[2%] md:px-[3%] justify-between flex flex-col mx-3 py-[5%] px-[5%] border border-slate-400 rounded-xl shadow-logo shadow-md md:text-lg mylg:text-xl space-y-2">
+        <div class="text-center font-bold text-lg md:text-xl mylg:text-2xl">Get started on your own backyard paradise!</div>
+        <div class="flex flex-col md:flex-row md:space-x-5 md:space-y-0 justify-center font-sans font-semibold text-center space-y-2">
+            <button class="border border-slate-600 rounded-xl py-2 px-6 flex items-center justify-center shadow-lg hover:bg-slate-100 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6 mr-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+                </svg>                
+                01147005858
+            </button>
+            <button class="border border-slate-600 rounded-xl py-2 px-6 text-white bg-logo border-none shadow-lg hover:bg-logo2 transition-all">Get A Free Quote</button>
+        </div>
+    </div>
+
+
+
+    <!-- ranges -->
+    <div class="md:container md:mx-auto mx-4 flex flex-col items-center justify-evenly text-center text-slate-800 py-6 space-y-1 md:py-16 md:space-y-3">
+        <div class="font-bold text-2xl md:text-4xl">Featured Ranges</div>
+        <div class="md:font-semibold md:text-xl mylg:px-[25%] md:px-[14%]">Stormy Pools was established in 1972 and has grown to become an iconic inground fibreglass swimming pool brand and global company</div>
+    </div>
+
+    <!-- some info -->
+    <div class="hidden md:block">
+    <div class="grid grid-rows-5 grid-flow-col gap-4 gap-y-6 container mx-auto max-h-[1000px] px-10">
+        <div class="row-span-3 col-span-2 relative shadow-slate-400 rounded-2xl shadow-lg">
+            <img class="w-full h-[600px] object-cover rounded-2xl" src="photos/slider1.jpg">
+            <div class="rounded-2xl absolute bottom-0 left-0 right-0 px-8 py-4 bg-black bg-opacity-25 text-white flex flex-row justify-between items-center mx-4 my-4">
+            <div class="text-2xl font-bold">Symphony</div>
+                <button type="submit" class="bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="#"> Take a Look </a> </button>
+            </div>
+        </div>
+        <div class="row-span-2 col-span-1">
+            <div class="row-span-4 col-span-2 relative shadow-slate-400 rounded-2xl shadow-lg">
+                <img class="rounded-2xl w-full h-2/5 object-cover" src="photos/Serene-6-in-Bondi-Sand-Toowoomba014-min-scaled.jpg">
+                <div class="rounded-2xl absolute bottom-0 left-0 right-0 px-4 lg:px-8 py-4 bg-black bg-opacity-25 text-white flex flex-row justify-between items-center mx-4 my-4">
+                    <div class="text-2xl font-bold">Serene</div>
+                    <button type="submit" class="bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="#" class="flex items-center justify-center space-x-1"> <p>Take a Look</p>
+                        
+                    </a> </button>
+                </div>
+            </div>
+        </div>
+        <div class="row-span-2 col-span-1">
+            <div class="row-span-4 col-span-2 relative shadow-slate-400 rounded-2xl shadow-lg">
+                <img class="rounded-2xl w-full h-2/5 object-cover" src="photos/WSH_Grandeur-11_Whitehaven-Pearl-4.jpg">
+                <div class="rounded-2xl absolute bottom-0 left-0 right-0 px-4 lg:px-8 py-4 bg-black bg-opacity-25 text-white flex flex-row justify-between items-center mx-4 my-4">
+                    <div class="text-2xl font-bold">Grandeur</div>
+                    <button type="submit" class="bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="#"> Take a Look </a> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>  
+
+    <!--some info slider that appear when shrink-->
+    <div class="container mx-auto relative md:hidden">
+        <div>
+            <div class="slider-container overflow-hidden rounded-xl mx-2 shadow-slate-400 shadow-lg">
+            <div class="slider flex transition-transform duration-1000 ease-in-out">
+                <div class="slide w-full flex-shrink-0 relative">
+                <img src="photos/slider1.jpg" alt="Image 1" class="w-full h-auto object-cover">
+                <div class="slide-content absolute bottom-0 left-0 right-0 xsm:p-4 p-2 text-center text-white">
+                    <div class="flex justify-between items-center bg-black bg-opacity-25 rounded-2xl mx-2 px-3 py-2 xsm:px-4 xsm:py-2">
+                    <h2 class="text-lg xsm:text-xl font-bold">Symphony</h2>
+                    <button class="bg-logo text-white font-bold py-1 px-2 xsm:py-2 xsm:px-4 rounded-full hover:bg-logo2 transition-all"><a href="#"> Take a Look </a> </button>
+                    </div>
+                </div>
+                </div>
+
+                <div class="slide w-full flex-shrink-0 relative">
+                <img src="photos/Serene-6-in-Bondi-Sand-Toowoomba014-min-scaled.jpg" alt="Image 2" class="w-full h-auto object-cover">
+                <div class="slide-content absolute bottom-0 left-0 right-0 xsm:p-4 p-2 text-center text-white">
+                    <div class="flex justify-between items-center bg-black bg-opacity-25 rounded-2xl mx-2 px-3 py-2 xsm:px-4 xsm:py-2">
+                    <h2 class="text-lg xsm:text-xl font-bold">Serene</h2>
+                    <button class="bg-logo text-white font-bold py-1 px-2 xsm:py-2 xsm:px-4 rounded-full hover:bg-logo2 transition-all"> <a href="#"> Take a Look </a> </button>
+                    </div>
+                </div>
+                </div>
+
+                <div class="slide w-full flex-shrink-0 relative">
+                <img src="photos/WSH_Grandeur-11_Whitehaven-Pearl-4.jpg" alt="Image 3" class="w-full h-auto object-cover">
+                <div class="slide-content absolute bottom-0 left-0 right-0 xsm:p-4 p-2 text-center text-white">
+                    <div class="flex justify-between items-center bg-black bg-opacity-25 rounded-2xl mx-2 px-3 py-2 xsm:px-4 xsm:py-2">
+                    <h2 class="text-lg xsm:text-xl font-bold">Grandeur</h2>
+                    <button class="bg-logo text-white font-bold py-1 px-2 xsm:py-2 xsm:px-4 rounded-full hover:bg-logo2 transition-all"> <a href="#"> Take a Look </a> </button>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        <!-- Sliding Buttons -->
+        <div class="absolute top-1/2 -translate-y-1/2 flex items-center justify-between w-full px-2 xsm:px-4 z-10">
+          <button onclick="prevSlide()" class="bg-black bg-opacity-50 text-white w-9 h-9 xsm:w-12 xsm:h-12 flex items-center justify-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <button onclick="nextSlide()" class="bg-black bg-opacity-50 text-white w-9 h-9 xsm:w-12 xsm:h-12 flex items-center justify-center rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+    </div>
+
+    
+    <!-- footer section -->
+    <footer class=" mt-96 bg-[#1e272e] w-full">
+            <div class="custom-shape-divider-top-1709748522">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+
+            <div id="content" class="bg-[#1e272e] h-full flex flex-col justify-evenly text-white space-y-5 ">
+                <div id="upper" class=" w-full grid grid-cols-1 gap-4 gap-y-6 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4 lg:gap-4 text-center h-full sm:container sm:mx-auto">
+                    <div class=" flex flex-col justify-center items-center sm:items-start sm:justify-start space-y-4">
+                        <img src="photos/logo2.png" class="w-[160px] sm:w-[250px] sm:min-w-[180px]" alt="logo2">
+                        <p class="sm:text-start font-semibold opacity-95">Celebrating 50 Years of Bringing Dreams to Life</p>
+                     </div>
+                    <div>
+                        <ul class="flex flex-col space-y-3 sm:text-start">
+                            <li class=" font-semibold text-lg">Helpful Links</li>
+                            <li><a href="#" class="opacity-75">About Us</a></li>
+                            <li><a href="#" class="opacity-75">Stormy Pools International</a></li>
+                            <li><a href="#" class="opacity-75">Franchise Opportunities</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="flex flex-col space-y-3 sm:text-start">
+                            <li class=" font-semibold text-lg">Explore</li>
+                            <li><a href="#" class="opacity-75">Pool Finance</a></li>
+                            <li><a href="#" class="opacity-75">Why Fibreglass</a></li>
+                            <li><a href="#" class="opacity-75">Kit Pools</a></li>
+                            <li><a href="#" class="opacity-75">Free Standing/Above-Ground Pools</a></li>
+                            <li><a href="#" class="opacity-75">Stormy Pools AR App</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="flex flex-col space-y-3 sm:text-start">
+                            <li class=" font-semibold text-lg">Resources</li>
+                            <li class="opacity-75"><a href="#">Blogs</a></li>
+                            <li class="opacity-75"><a href="#">Gallery</a></li>
+                            <li class="opacity-75"><a href="#">Our Colors</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="lower" class=" w-full flex flex-col sm:flex-row items-center text-center justify-between bottom-0 sm:container sm:mx-auto border-t border-slate-600 py-4">
+                    <p>Copyright © 2024 Stormy. All rights reserved.</p>
+                    <div class="flex flex-row items-center justify-end space-x-5 py-3 sm:py-1">
+                        
+                        <a href="https://www.facebook.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook w-6 h-6" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                            </svg>
+                        </a>
+                        
+                        <a href="https://www.instagram.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram w-6 h-6" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                            </svg>
+                        </a>
+                        
+                        <a href="https://www.x.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter-x w-6 h-6" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+    </footer>
+  
+
+<!-- Some js Scripts -->
+<script>
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+  
+    function goToSlide(index) {
+      if (index < 0) {
+        currentIndex = slides.length - 1;
+      } else if (index >= slides.length) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+  
+      const offsetX = -currentIndex * 100;
+      slider.style.transform = `translateX(${offsetX}%)`;
+    }
+  
+    function nextSlide() {
+      goToSlide(currentIndex + 1);
+    }
+  
+    function prevSlide() {
+      goToSlide(currentIndex - 1);
+    }
+  </script>
+</body>
+</html>
