@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head class="scroll-auto">
+<head class="scroll-smooth">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project</title>
     <link rel="stylesheet" href="output.css">
     <style>
+
 .hazem {
     position: absolute;
     bottom: 0;
@@ -77,30 +78,18 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
                                               backToTopButton.innerHTML =      '<svg class="back-to-top-button-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" > <g fill="none" fill-rule="evenodd"> <path d="M0 0H32V32H0z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> <path class="back-to-top-button-img" fill-rule="nonzero" d="M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> </g> </svg>';    backToTopButtonSvg = document.querySelector(".back-to-top-button-svg");    backToTopButtonSvg.style.verticalAlign = "middle";    backToTopButtonSvg.style.margin = "auto";    backToTopButtonSvg.style.justifyContent = "center";    backToTopButtonSvg.style.width = obj.svgWidth;    backToTopButtonSvg.style.height = obj.svgHeight;    backToTopButton.appendChild(backToTopButtonSvg);    backToTopButtonImg = document.querySelector(".back-to-top-button-img");    backToTopButtonImg.style.fill = obj.selectedIconColor;    backToTopButtonSvg.appendChild(backToTopButtonImg);    backToTopButtonImg.setAttribute("d", obj.buttonD);    backToTopButtonImg.setAttribute("transform", obj.buttonT);        if(!pageSimulator) {      backToTopButton.style.display = "none";      window.onscroll = function() {        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {          backToTopButton.style.display = "block";        } else {          backToTopButton.style.display = "none";        }      };        backToTopButton.onclick = function() {        document.body.scrollTop = 0;        document.documentElement.scrollTop = 0;      };    }  };document.addEventListener("DOMContentLoaded", function() { createButton(configObj, null); });
 </script>
 </head>
-<body class="">
+<body>
     
     <!-- header of the nav bar -->
     <header class="border-b-[2px] border-logo fixed z-50 bg-white w-full">
         <nav class="2xl:container 2xl:mx-auto mx-4 flex justify-between text-slate-800 h-[80px] md:h-[90px]">
             <div class="flex items-center"> <img src="photos/logo2.png" class="w-[160px] sm:w-[250px] sm:min-w-[180px]"> </div>   
             <div class="hidden mylg:flex mylg:items-center 2xl:space-x-6 mylg:mx-2 mylg:space-x-4 font-bold font-sans text-slate-900 text-lg">
-                    <a class="hover:bg-logo active:bg-logo2 hover:text-white hover:py-3 sm:py-1 hover:px-6 hover:rounded-full transition-all flex items-center" href="#">Pools & Spas
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 m-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                          </svg>                          
-                      </a>
+                    <a class="hover:bg-logo active:bg-logo2 hover:text-white hover:py-3 sm:py-1 hover:px-6 hover:rounded-full transition-all flex items-center" href="#">Pools & Spas</a>
                     <a class="hover:bg-logo active:bg-logo2 hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">Gallery</a>
-                    <a class="flex itemes-center hover:bg-logo active:bg-logo2 hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">About Us
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class=" w-5 m-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                          </svg>  
-                    </a>
+                    <a class="flex itemes-center hover:bg-logo active:bg-logo2 hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">About Us</a>
                     <a class="hover:bg-logo active:bg-logo2 hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">Testimonials</a>
-                    <a class="flex items-center hover:bg-logo active:bg-logo2 hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">Resouces
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 m-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                          </svg>  
-                    </a>
+                    <a class="flex items-center hover:bg-logo active:bg-logo2 hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">Resouces</a>
             </div>
             <div class="hidden mylg:flex justify-between xl:ml-0">
                 <div class="flex items-center text-slate-100 font-sans font-bold px-3 text-lg border border-logo rounded-sm bg-logo effect">
@@ -125,12 +114,12 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
                 </button>
             </div>
         </nav>
-        <div id="menu" class="absolute bg-white left-0 right-0 flex hidden mylg:hidden flex-col items-center justify-center">
-            <a class=" hover:text-white active:bg-logo2 hover:bg-logo w-full text-center font-semibold transition-all flex justify-center py-4 text-lg" href="#">Pools & Spas</a>
-            <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg" href="#">Gallery</a>
-            <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg" href="#">About Us</a>
-            <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg" href="#">Testimonials</a>
-            <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg" href="#">Resouces</a>
+        <div id="menu" class="absolute bg-white left-0 right-0 hidden mylg:hidden flex-col items-center justify-center">
+            <a class=" hover:text-white active:bg-logo2 hover:bg-logo w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="#">Pools & Spas</a>
+            <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="#">Gallery</a>
+            <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="#">About Us</a>
+            <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="#">Testimonials</a>
+            <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="#">Resouces</a>
             <div class="bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg text-slate-100">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 mr-2 ease-out duration-300">
                     <path fill-rule="evenodd" d="M19.5 9.75a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 1 1.5 0v2.69l4.72-4.72a.75.75 0 1 1 1.06 1.06L16.06 9h2.69a.75.75 0 0 1 .75.75Z" clip-rule="evenodd" />
@@ -251,7 +240,6 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
     <div class="mydivider"></div>
     <!-- divider -->
 
-
     <!-- contact section -->
     <div class="sm:container sm:mx-auto md:flex-row md:items-center md:py-[2%] md:px-[3%] justify-between flex flex-col mx-3 py-[5%] px-[5%] border border-slate-400 rounded-xl shadow-logo shadow-md md:text-lg mylg:text-xl space-y-2">
         <div class="text-center font-bold text-lg md:text-xl mylg:text-2xl">Get started on your own backyard paradise!</div>
@@ -266,8 +254,6 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
         </div>
     </div>
 
-
-
     <!-- ranges -->
     <div class="md:container md:mx-auto mx-4 flex flex-col items-center justify-evenly text-center text-slate-800 py-6 space-y-1 md:py-16 md:space-y-3">
         <div class="font-bold text-2xl md:text-4xl">Featured Ranges</div>
@@ -276,31 +262,33 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
 
     <!-- some info -->
     <div class="hidden md:block">
-    <div class="grid grid-rows-5 grid-flow-col gap-4 gap-y-6 container mx-auto max-h-[1000px] px-10 ">
-        <div class="row-span-3 col-span-2 relative shadow-slate-400 rounded-2xl shadow-lg">
+    <div class="flex flex-col container space-y-6 mx-auto max-h-[1000px] px-10 ">
+        <div class="h-3/5 left-0 right-0 relative shadow-slate-400 rounded-2xl shadow-lg">
             <img class="w-full h-[600px] object-cover rounded-2xl" src="photos/slider1.jpg">
             <div class="rounded-2xl absolute bottom-0 left-0 right-0 px-8 py-4 bg-black bg-opacity-25 text-white flex flex-row justify-between items-center mx-4 my-4">
             <div class="text-2xl font-bold">Symphony</div>
                 <button type="submit" class="effect bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="#"> Take a Look </a> </button>
             </div>
         </div>
-        <div class="row-span-2 col-span-1">
-            <div class="row-span-4 col-span-2 relative shadow-slate-400 rounded-2xl shadow-lg">
-                <img class="rounded-2xl w-full h-2/5 object-cover" src="photos/Serene-6-in-Bondi-Sand-Toowoomba014-min-scaled.jpg">
-                <div class="rounded-2xl absolute bottom-0 left-0 right-0 px-4 lg:px-8 py-4 bg-black bg-opacity-25 text-white flex flex-row justify-between items-center mx-4 my-4">
-                    <div class="text-2xl font-bold">Serene</div>
-                    <button type="submit" class="effect bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="#" class="flex items-center justify-center space-x-1"> <p>Take a Look</p>
-                        
-                    </a> </button>
+        <div class="flex space-x-6 flex-row">
+            <div class="w-1/2">
+                <div class="row-span-4 col-span-2 relative shadow-slate-400 rounded-2xl shadow-lg">
+                    <img class="rounded-2xl w-full h-2/5 object-cover" src="photos/Serene-6-in-Bondi-Sand-Toowoomba014-min-scaled.jpg">
+                    <div class="rounded-2xl absolute bottom-0 left-0 right-0 px-4 lg:px-8 py-4 bg-black bg-opacity-25 text-white flex flex-row justify-between items-center mx-4 my-4">
+                        <div class="text-2xl font-bold">Serene</div>
+                        <button type="submit" class="effect bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="#" class="flex items-center justify-center space-x-1"> <p>Take a Look</p>
+                            
+                        </a> </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row-span-2 col-span-1">
-            <div class="row-span-4 col-span-2 relative shadow-slate-400 rounded-2xl shadow-lg">
-                <img class="rounded-2xl w-full h-2/5 object-cover" src="photos/WSH_Grandeur-11_Whitehaven-Pearl-4.jpg">
-                <div class="rounded-2xl absolute bottom-0 left-0 right-0 px-4 lg:px-8 py-4 bg-black bg-opacity-25 text-white flex flex-row justify-between items-center mx-4 my-4">
-                    <div class="text-2xl font-bold">Grandeur</div>
-                    <button type="submit" class="effect bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="#"> Take a Look </a> </button>
+            <div class="w-1/2">
+                <div class="row-span-4 col-span-2 relative shadow-slate-400 rounded-2xl shadow-lg">
+                    <img class="rounded-2xl w-full h-2/5 object-cover" src="photos/WSH_Grandeur-11_Whitehaven-Pearl-4.jpg">
+                    <div class="rounded-2xl absolute bottom-0 left-0 right-0 px-4 lg:px-8 py-4 bg-black bg-opacity-25 text-white flex flex-row justify-between items-center mx-4 my-4">
+                        <div class="text-2xl font-bold">Grandeur</div>
+                        <button type="submit" class="effect bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="#"> Take a Look </a> </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -361,7 +349,7 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
     </div>
 
     <!-- divider -->
-    <div class="mydivider mt-[10%]"></div>
+    <div class="mydivider mt-[9%]"></div>
     <!-- divider -->
     
     <!-- under slider section -->
@@ -401,7 +389,6 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
         </div>
     </div>
 
-
     <!-- under slider section -->
     <div class="bg-slate-100">
     <div class="sm:container sm:mx-auto mx-3 py-10">
@@ -440,14 +427,9 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
     </div>
     </div>
 
-
-
-
     <!-- divider -->
     <div class="mydivider"></div>
     <!-- divider -->
-
-    
 
     <!--some gallary slider that appear -->
     <div>  
@@ -508,8 +490,21 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
                 </div>
     </div>
 
+    <!-- divider -->
+    <div class="mydivider"></div>
+    <!-- divider -->
 
+    <!-- assosiated with -->
 
+    <div class="sm:container sm:mx-auto mx-2 space-y-6 flex flex-col items-center justify-center mb-10">
+        <div class="sm:text-3xl text-2xl font-semibold text-center">Proudly Associated With</div>
+        <div class="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-x-6">
+            <img src="photos/svgess/image-3.png">
+            <img class="sm:border-x-[1px] sm:border-slate-300 sm:px-4" src="photos/svgess/image-4.png">
+            <img src="photos/svgess/image-5.png">
+        </div>
+        <div class="sm:text-lg font-semibold text-center">We offer a lifetime structural warranty on our inground pools</div>
+    </div>
 
     <!-- footer section -->
     <footer class="bg-[#1e272e] w-full">
@@ -579,7 +574,6 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
             </div>
 
     </footer>
-
 
 <!-- Some js Scripts -->
 <script src="jsfile.js"></script>
