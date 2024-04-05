@@ -3,7 +3,7 @@
 <head class="scroll-smooth">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Project</title>
+    <title>Stormy Pools</title>
     <link rel="stylesheet" href="output.css">
     <style>
 
@@ -77,18 +77,36 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
                                             backToTopButton.style.textAlign = "center";    backToTopButton.style.border = "solid 2px currentColor";  
                                               backToTopButton.innerHTML =      '<svg class="back-to-top-button-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" > <g fill="none" fill-rule="evenodd"> <path d="M0 0H32V32H0z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> <path class="back-to-top-button-img" fill-rule="nonzero" d="M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> </g> </svg>';    backToTopButtonSvg = document.querySelector(".back-to-top-button-svg");    backToTopButtonSvg.style.verticalAlign = "middle";    backToTopButtonSvg.style.margin = "auto";    backToTopButtonSvg.style.justifyContent = "center";    backToTopButtonSvg.style.width = obj.svgWidth;    backToTopButtonSvg.style.height = obj.svgHeight;    backToTopButton.appendChild(backToTopButtonSvg);    backToTopButtonImg = document.querySelector(".back-to-top-button-img");    backToTopButtonImg.style.fill = obj.selectedIconColor;    backToTopButtonSvg.appendChild(backToTopButtonImg);    backToTopButtonImg.setAttribute("d", obj.buttonD);    backToTopButtonImg.setAttribute("transform", obj.buttonT);        if(!pageSimulator) {      backToTopButton.style.display = "none";      window.onscroll = function() {        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {          backToTopButton.style.display = "block";        } else {          backToTopButton.style.display = "none";        }      };        backToTopButton.onclick = function() {        document.body.scrollTop = 0;        document.documentElement.scrollTop = 0;      };    }  };document.addEventListener("DOMContentLoaded", function() { createButton(configObj, null); });
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    $(window).on('load', function() {
+    $("#loadfirst").fadeOut(1100);
+        // $("#mycontent").fadeIn(2000);
+     });
+</script>    
 </head>
 <body>
     
+
+
+<!-- my loader -->
+<div id="loadfirst" class="h-screen flex justify-center items-center bg-gray-100 z-50 w-screen absolute">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="text-logo w-20 h-20 animate-ping ease-out">
+        <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z" clip-rule="evenodd" />
+      </svg>      
+</div>
+
+
     <!-- header of the nav bar -->
     <header class="border-b-[2px] border-logo fixed z-50 bg-white w-full">
         <nav class="2xl:container 2xl:mx-auto mx-4 flex justify-between text-slate-800 h-[80px] md:h-[90px]">
-            <div class="flex items-center"> <img src="photos/logo2.png" class="w-[160px] sm:w-[250px] sm:min-w-[180px]"> </div>   
+            <a href="index.html" class="flex items-center"> <img src="photos/logo2.png" class="w-[160px] sm:w-[250px] sm:min-w-[180px]"> </a>   
             <div class="hidden mylg:flex mylg:items-center 2xl:space-x-6 mylg:mx-2 mylg:space-x-4 font-bold font-sans text-slate-900 text-lg">
                     <a class="hover:bg-logo active:bg-logo2 hover:text-white hover:py-3 sm:py-1 hover:px-6 hover:rounded-full transition-all flex items-center" href="#">Pools & Spas</a>
                     <a class="hover:bg-logo active:bg-logo2 hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">Gallery</a>
                     <a class="flex itemes-center hover:bg-logo active:bg-logo2 hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">About Us</a>
-                    <a class="hover:bg-logo active:bg-logo2 hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">Testimonials</a>
+                    <a class="hover:bg-logo active:bg-logo2 hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="testimonials.html">Testimonials</a>
                     <a class="flex items-center hover:bg-logo active:bg-logo2 hover:text-white hover:py-2 hover:px-6 hover:rounded-full transition-all" href="#">Resouces</a>
             </div>
             <div class="hidden mylg:flex justify-between xl:ml-0">
@@ -118,7 +136,7 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
             <a class=" hover:text-white active:bg-logo2 hover:bg-logo w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="#">Pools & Spas</a>
             <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="#">Gallery</a>
             <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="#">About Us</a>
-            <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="#">Testimonials</a>
+            <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="testimonials.html">Testimonials</a>
             <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="#">Resouces</a>
             <div class="bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg text-slate-100">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 mr-2 ease-out duration-300">
@@ -361,7 +379,7 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
                 <p class="sm:text-lg">From initial contact with the team at Stormy Pools, and all the guys who installed the pool, all were professional, knowledgeable and courteous.</p>
                 <p class="sm:text-lg">Even their recommended businesses for ancillary works were proficient in what they did. All up a great experience despite the continual rain creating havoc with the schedule.</p>
                 <p class="sm:text-lg">Highly recommended</p>
-                <div class="flex self-center sm:self-start items-center justify-center sm:justify-start">
+                <div class="flex items-center justify-center sm:justify-start">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 fill-logo">
                     <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
                   </svg>
@@ -383,9 +401,9 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
                   </svg>
                   
                 </div>
-                <button class="effect rounded-2xl px-4 py-2 font-semibold border-slate-900 border-2  hover:bg-slate-800 hover:text-white transition-all">Read more Stories</button>
+                <button class="effect rounded-2xl px-4 py-2 font-semibold border-slate-900 border-2  hover:bg-slate-800 hover:text-white transition-all"> <a href="testimonials.html">Read more Stories</a></button>
             </div>
-            <div class="effectphoto"> <img src="photos/blub 1.png" class="sm:max-h-[400px] max-h-[250px]"> </div>
+            <div class="effectphoto"> <img src="photos/b5.png" class="sm:max-h-[400px] max-h-[250px] pb-4"> </div>
         </div>
     </div>
 
@@ -393,13 +411,13 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
     <div class="bg-slate-100">
     <div class="sm:container sm:mx-auto mx-3 py-10">
         <div class="flex flex-col sm:flex-row text-center sm:text-left  items-center sm:justify-evenly space-x-4 space-y-2 mx-4">
-            <div class="effectphoto"><img src="photos/blub2.png" class="sm:max-h-[400px] max-h-[250px]"> </div>
+            <div class="effectphoto"><img src="photos/b6.png" class="sm:max-h-[400px] max-h-[250px] pb-4"> </div>
             <div class="space-y-2 sm:space-y-4 sm:w-1/2 text-slate-900">
                 <h1 class="sm:text-3xl text-2xl font-semibold">“Peace of mind!”</h1>
                 <p class="sm:text-lg">It was indeed a pleasure to deal with Stormy Pools. Easy to deal with and communicate.</p>
                 <p class="sm:text-lg">From the time we started, the entire Stormy team were fantastic to deal with, keeping me up-to date on the progress from the start to finish.</p>
                 <p class="sm:text-lg">“Nothing was a problem when questions were raised!”</p>
-                <div class="flex self-center sm:self-start items-center justify-center sm:justify-start">
+                <div class="flex items-center justify-center sm:justify-start">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 fill-logo">
                     <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
                   </svg>
@@ -421,7 +439,7 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
                   </svg>
                   
                 </div>
-                <button class="effect rounded-2xl px-4 py-2 font-semibold border-slate-900 border-2  hover:bg-slate-800 hover:text-white transition-all">Read more Stories</button>
+                <button class="effect rounded-2xl px-4 py-2 font-semibold border-slate-900 border-2  hover:bg-slate-800 hover:text-white transition-all"> <a href="testimonials.html">Read more Stories</a></button>
             </div>
         </div>
     </div>
@@ -517,7 +535,7 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
             <div id="content" class="bg-[#1e272e] h-full flex flex-col justify-evenly text-white space-y-5 ">
                 <div id="upper" class=" w-full grid grid-cols-1 gap-4 gap-y-6 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4 lg:gap-4 text-center h-full sm:container sm:mx-auto">
                     <div class=" flex flex-col justify-center items-center sm:items-start sm:justify-start space-y-4">
-                        <img src="photos/logo2.png" class="w-[160px] sm:w-[250px] sm:min-w-[180px]" alt="logo2">
+                        <a href="index.html"><img src="photos/logo2.png" class="w-[160px] sm:w-[250px] sm:min-w-[180px]" alt="logo2"></a>
                         <p class="sm:text-start font-semibold opacity-95">Celebrating 50 Years of Bringing Dreams to Life</p>
                      </div>
                     <div>
@@ -575,7 +593,9 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
 
     </footer>
 
+
 <!-- Some js Scripts -->
 <script src="jsfile.js"></script>
+</script>
 </body>
 </html>
