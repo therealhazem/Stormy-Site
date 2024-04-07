@@ -50,6 +50,10 @@ function prevSlide() {
   goToSlide(currentIndex - 1);
 }
 
+setInterval(nextSlide, 3500);
+setInterval(nextSlidee, 3500);
+
+
 
 
 const menu = document.querySelector("#menu");
@@ -87,3 +91,19 @@ hambutton.addEventListener("click", () => {
 
     // Add click event listener to the icon
   icon.addEventListener('click', toggleEffect);
+
+
+
+  function openFullScreen(imageSrc) {
+    var fullScreenImg = document.querySelector('#fullScreenModal img');
+    fullScreenImg.src = imageSrc;
+    document.getElementById('fullScreenModal').classList.remove('hidden');
+    document.body.classList.add('overflow-hidden'); // Disable scrolling
+  }
+
+  function closeFullScreen() {
+    var fullScreenImg = document.querySelector('#fullScreenModal img');
+    fullScreenImg.src = "";
+    document.getElementById('fullScreenModal').classList.add('hidden');
+    document.body.classList.remove('overflow-hidden'); // Enable scrolling
+  }

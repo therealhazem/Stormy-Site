@@ -937,12 +937,12 @@ video {
   height: 600px;
 }
 
-.h-\[68\%\] {
-  height: 68%;
+.h-\[65px\] {
+  height: 65px;
 }
 
-.h-\[80px\] {
-  height: 80px;
+.h-\[68\%\] {
+  height: 68%;
 }
 
 .h-auto {
@@ -955,10 +955,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[65px\] {
-  height: 65px;
 }
 
 .max-h-\[1000px\] {
@@ -1034,6 +1030,11 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-translate-y-16 {
+  --tw-translate-y: -4rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .rotate-180 {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1067,6 +1068,10 @@ video {
 
 .animate-ping {
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .appearance-none {
@@ -1125,6 +1130,10 @@ video {
 
 .justify-evenly {
   justify-content: space-evenly;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-4 {
@@ -1333,6 +1342,10 @@ video {
   --tw-bg-opacity: 0.75;
 }
 
+.bg-opacity-90 {
+  --tw-bg-opacity: 0.9;
+}
+
 .fill-logo {
   fill: #F8971C;
 }
@@ -1344,6 +1357,11 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .p-2 {
@@ -1458,10 +1476,6 @@ video {
 
 .pt-\[3\%\] {
   padding-top: 3%;
-}
-
-.pt-\[80px\] {
-  padding-top: 80px;
 }
 
 .pt-\[65px\] {
@@ -1609,6 +1623,10 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 .ease-in-out {
@@ -1961,6 +1979,10 @@ video {
 
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .sm\:flex-row {
@@ -2320,6 +2342,10 @@ video {
     width: 13rem;
   }
 
+  .mylg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .mylg\:items-center {
     align-items: center;
   }
@@ -2375,6 +2401,10 @@ video {
   .mylg\:py-2 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+  }
+
+  .mylg\:pt-12 {
+    padding-top: 3rem;
   }
 
   .mylg\:text-2xl {
