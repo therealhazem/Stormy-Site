@@ -50,8 +50,8 @@ function prevSlide() {
   goToSlide(currentIndex - 1);
 }
 
-setInterval(nextSlide, 3500);
-setInterval(nextSlidee, 3500);
+setInterval(nextSlide, 4000);
+setInterval(nextSlidee, 4000);
 
 
 

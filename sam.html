@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head class="scroll-smooth">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+
+        .hazem {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 55%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .hazem svg {
+            position: relative;
+            display: block;
+            width: calc(105% + 1.3px);
+        }
+        
+        
+        .custom-shape-divider-bottom-1708696219 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+        
+        .custom-shape-divider-bottom-1708696219 svg {
+            position: relative;
+            display: block;
+            width: calc(88% + 1.3px);
+            transform: rotateY(180deg);
+        }
+        
+        
+        .custom-shape-divider-top-1709748522 {
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .custom-shape-divider-top-1709748522 svg {
+            position: relative;
+            display: block;
+            width: calc(120% + 1.3px);
+            height: 100px;
+        }
+        
+        .custom-shape-divider-top-1709748522 .shape-fill {
+            fill: #FFFFFF;
+        }
+        
+    </style>
+    <script> configObj = {"buttonD":"M8 17.333h5.333v4C13.333 22.806 14.527 24 16 24c1.473 0 2.667-1.194 2.667-2.667v-4H24L16 8l-8 9.333z","buttonT":"translate(-1088 -172) translate(832 140) translate(32 32) translate(224)","shadowSize":"none","roundnessSize":"14px","buttonDToBottom":"18px","buttonDToRight":"18px","selectedBackgroundColor":"#f8971c","selectedIconColor":"#0f172a","buttonWidth":"40px","buttonHeight":"40px","svgWidth":"32px","svgHeight":"32px"};
+    function createButton(obj, pageSimulator) {    const body = document.querySelector("body");
+        backToTopButton = document.createElement("span");
+            backToTopButton.classList.add("softr-back-to-top-button"); 
+               backToTopButton.id = "softr-back-to-top-button"; 
+                  pageSimulator      ? pageSimulator.appendChild(backToTopButton)      : body.appendChild(backToTopButton);
+                      backToTopButton.style.width = obj.buttonWidth;    backToTopButton.style.height = obj.buttonHeight;
+                          backToTopButton.style.marginRight = obj.buttonDToRight;    backToTopButton.style.marginBottom = obj.buttonDToBottom;
+                              backToTopButton.style.borderRadius = obj.roundnessSize;    backToTopButton.style.boxShadow = obj.shadowSize;
+                                  backToTopButton.style.color = obj.selectedBackgroundColor;    backToTopButton.style.backgroundColor = obj.selectedBackgroundColor;
+                                      pageSimulator ? backToTopButton.style.position = "absolute" : backToTopButton.style.position = "fixed";
+                                          backToTopButton.style.outline = "none";    backToTopButton.style.bottom = "0px";
+                                             backToTopButton.style.right = "0px";    backToTopButton.style.cursor = "pointer"; 
+                                                backToTopButton.style.textAlign = "center";    backToTopButton.style.border = "solid 2px currentColor";  
+                                                  backToTopButton.innerHTML =      '<svg class="back-to-top-button-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" > <g fill="none" fill-rule="evenodd"> <path d="M0 0H32V32H0z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> <path class="back-to-top-button-img" fill-rule="nonzero" d="M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> </g> </svg>';    backToTopButtonSvg = document.querySelector(".back-to-top-button-svg");    backToTopButtonSvg.style.verticalAlign = "middle";    backToTopButtonSvg.style.margin = "auto";    backToTopButtonSvg.style.justifyContent = "center";    backToTopButtonSvg.style.width = obj.svgWidth;    backToTopButtonSvg.style.height = obj.svgHeight;    backToTopButton.appendChild(backToTopButtonSvg);    backToTopButtonImg = document.querySelector(".back-to-top-button-img");    backToTopButtonImg.style.fill = obj.selectedIconColor;    backToTopButtonSvg.appendChild(backToTopButtonImg);    backToTopButtonImg.setAttribute("d", obj.buttonD);    backToTopButtonImg.setAttribute("transform", obj.buttonT);        if(!pageSimulator) {      backToTopButton.style.display = "none";      window.onscroll = function() {        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {          backToTopButton.style.display = "block";        } else {          backToTopButton.style.display = "none";        }      };        backToTopButton.onclick = function() {        document.body.scrollTop = 0;        document.documentElement.scrollTop = 0;      };    }  };document.addEventListener("DOMContentLoaded", function() { createButton(configObj, null); });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(window).on('load', function() {
+            $("#loadfirst").fadeOut(1100);
+            // $("#mycontent").fadeIn(2000);
+            });
+    </script>    
+</head>
+<body>
+
+    
+
+
+
+
+    <!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+<!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+<!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+<div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+  <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
+    <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+  </div>
+  <div class="mx-auto max-w-2xl text-center">
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact sales</h2>
+    <p class="mt-2 text-lg leading-8 text-gray-600">Aute magna irure deserunt veniam aliqua magna enim voluptate.</p>
+  </div>
+  <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+      <div>
+        <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First name</label>
+        <div class="mt-2.5">
+          <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        </div>
+      </div>
+      <div>
+        <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Last name</label>
+        <div class="mt-2.5">
+          <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Company</label>
+        <div class="mt-2.5">
+          <input type="text" name="company" id="company" autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
+        <div class="mt-2.5">
+          <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">Phone number</label>
+        <div class="relative mt-2.5">
+          <div class="absolute inset-y-0 left-0 flex items-center">
+            <label for="country" class="sr-only">Country</label>
+            <select id="country" name="country" class="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+              <option>US</option>
+              <option>CA</option>
+              <option>EU</option>
+            </select>
+            <svg class="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Message</label>
+        <div class="mt-2.5">
+          <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+        </div>
+      </div>
+      <div class="flex gap-x-4 sm:col-span-2">
+        <div class="flex h-6 items-center">
+          <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
+          <button type="button" class="bg-gray-200 flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" role="switch" aria-checked="false" aria-labelledby="switch-1-label">
+            <span class="sr-only">Agree to policies</span>
+            <!-- Enabled: "translate-x-3.5", Not Enabled: "translate-x-0" -->
+            <span aria-hidden="true" class="translate-x-0 h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"></span>
+          </button>
+        </div>
+        <label class="text-sm leading-6 text-gray-600" id="switch-1-label">
+          By selecting this, you agree to our
+          <a href="#" class="font-semibold text-indigo-600">privacy&nbsp;policy</a>.
+        </label>
+      </div>
+    </div>
+    <div class="mt-10">
+      <button type="submit" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Let's talk</button>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+    <!-- contact section -->
+    <div class="sm:container sm:mx-auto md:flex-row md:items-center md:py-[2%] md:px-[3%] justify-between flex flex-col mx-3 py-[5%] px-[5%] border border-slate-400 rounded-xl shadow-logo shadow-md md:text-lg mylg:text-xl space-y-2 my-6 md:my-10 mylg:my-12">
+      <div class="text-center font-bold text-lg md:text-xl mylg:text-2xl">Get started on your own backyard paradise!</div>
+      <div class="flex flex-col md:flex-row md:space-x-5 md:space-y-0 justify-center font-sans font-semibold text-center space-y-2">
+          <button class="effect border border-slate-600 rounded-xl py-2 px-6 flex items-center justify-center shadow-lg hover:bg-slate-100 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6 mr-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+              </svg>                
+              01147005858
+          </button>
+         <a href="quote.html"> <button class="effect border border-slate-600 rounded-xl py-2 px-6 text-white bg-logo border-none shadow-lg hover:bg-logo2 transition-all">Get A Free Quote</button></a>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<!-- Some js Scripts -->
+<script src="jsfile.js"></script>
+</body>
+</html>

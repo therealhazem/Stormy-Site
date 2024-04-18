@@ -3,7 +3,7 @@
 <head class="scroll-smooth">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Public Pools</title>
+    <title>Get Free Quote</title>
     <link rel="stylesheet" href="output.css">
     <style>
 
@@ -85,7 +85,7 @@
             });
     </script>    
 </head>
-<body class="">
+<body>
 
 
 <!-- my loader -->
@@ -153,61 +153,142 @@
     <!-- hero section -->
     <div class="relative pt-[65px]">
 
-        <div class="absolute text-center flex-col flex items-center justify-center w-full h-[68%] sm:h-[75%] space-y-1 sm:space-y-3 mylg:space-y-5">
-            <h1 class="text-white text-2xl sm:text-4xl md:text-5xl font-extrabold mylg:text-6xl mx-1">Public Swimming <br> Pools Gallery</h1>
+        <div class="absolute text-center flex items-center justify-center w-full h-[68%] sm:h-[75%]">
+            <h1 class="text-white text-2xl sm:text-4xl md:text-5xl font-extrabold mylg:text-6xl mx-1">Speak To A Builder</h1>
         </div>
-
-        <img class=" w-full bottom-0 z-10 object-cover h-[220px] sm:h-[440px]  mylg:h-[600px]" src="public/cover.jpg">
-
+        <img class=" w-full bottom-0 z-10 object-cover h-[160px] sm:h-[220px]  mylg:h-[400px] " src="quote/cover.jpg">
     </div>
+
+
+    <!-- above form -->
+    <div class="sm:container sm:mx-auto mx-4 py-6 sm:py-8 lg:py-10">
+        <div class="sm:text-start text-center space-y-4 sm:px-4 mylg:px-0">
+            <h1 class="sm:text-3xl text-2xl font-semibold text-slate-800">Contact a Builder</h1>
+            <h2 class="sm:text-lg font-normal">We'll need to learn a little more about your project to connect you with <br> the right independent builder for your backyard experience.</h2>
+            <h3 class="sm:text-lg font-semibold">Please fill out all fields marked with <span class="text-red-500 font-extrabold text-xl">&#42;</span> are required.</h3>
+        </div>
+    </div>
+
+    <!-- form -->
+    <div class="sm:container sm:mx-auto mx-4">
+            <form class="px-4" action="index.html">
     
+        <div class="border-t border-gray-900/10 py-4">
+            <h2 class="text-lg font-semibold leading-7 text-gray-900 text-center sm:text-start">Some Information</h2>
+            <p class="mt-1 text-base text-center sm:text-start leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
+    
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div class="sm:col-span-3">
+                <label for="first-name" class="block text-lg font-medium leading-6 text-gray-900">First name <span class="text-red-500 font-extrabold text-base">&#42;</span></label>
+                <div class="mt-2">
+                <input required type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-2 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+    
+            <div class="sm:col-span-3">
+                <label for="last-name" class="block text-lg font-medium leading-6 text-gray-900">Last name <span class="text-red-500 font-extrabold text-base">&#42;</span></label>
+                <div class="mt-2">
+                <input required type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-2 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+    
+            <div class="sm:col-span-4">
+                <label for="email" class="block text-lg font-medium leading-6 text-gray-900">Email address <span class="text-red-500 font-extrabold text-base">&#42;</span></label>
+                <div class="mt-2">
+                <input required id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 px-2 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+    
+            <div class="sm:col-span-4">
+                <label for="country" class="block text-lg font-medium leading-6 text-gray-900">Country <span class="text-red-500 font-extrabold text-base">&#42;</span></label>
+                <div class="mt-4 flex">
+                    <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 px-1 py-2 bg-gray-200 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 max-w-[100px] sm:text-base sm:leading-6">
+                        <option class="bg-white">EG+20</option>
+                        <option class="bg-white">UAE+971</option>
+                        <option class="bg-white">SA+966</option>
+                    </select>
+                    <input required id="phone" name="phone" type="phone" autocomplete="phone" class="block w-full rounded-md border-0 px-2 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+            
+            <div class="col-span-full">
+                <label for="street-address" class="block text-lg font-medium leading-6 text-gray-900">Street address <span class="text-red-500 font-extrabold text-base">&#42;</span></label>
+                <div class="mt-2">
+                <input required type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+    
+            <div class="sm:col-span-2 sm:col-start-1">
+                <label for="city" class="block text-lg font-medium leading-6 text-gray-900">City</label>
+                <div class="mt-2">
+                <input type="text" name="city" id="city" autocomplete="address-level2" class="block w-full rounded-md border-0 px-2 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+    
+            <div class="sm:col-span-2">
+                <label for="region" class="block text-lg font-medium leading-6 text-gray-900">State / Province</label>
+                <div class="mt-2">
+                <input type="text" name="region" id="region" autocomplete="address-level1" class="block w-full rounded-md border-0 px-2 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+    
+            <div class="sm:col-span-2">
+                <label for="postal-code" class="block text-lg font-medium leading-6 text-gray-900">ZIP / Postal code </label>
+                <div class="mt-2">
+                <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" class="block w-full rounded-md border-0 px-2 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
+            </div>
+
+            <div class="sm:col-span-3">
+                <label for="country" class="block text-lg font-medium leading-6 text-gray-900">Preferred Design</label>
+                <div class="mt-4 flex">
+                    <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 px-1 py-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 max-w-full sm:text-base sm:leading-6">
+                        <option class="bg-white">Select a pool design</option>
+                        <option class="bg-white">Symphony</option>
+                        <option class="bg-white">Serene</option>
+                        <option class="bg-white">Grandeur</option>
+                    </select>
+                </div>
+            </div>
 
 
-    <!-- private pools grid -->
+            <div class="sm:col-span-3">
+                <label for="country" class="block text-lg font-medium leading-6 text-gray-900">When are you looking to get your new pool installed?</label>
+                <div class="mt-4 flex">
+                    <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 px-1 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 max-w-full sm:text-base sm:leading-6">
+                        <option class="bg-white">Select an option</option>
+                        <option class="bg-white">1-3 Months</option>
+                        <option class="bg-white">6 Months+</option>
+                        <option class="bg-white">1 year+</option>
+                    </select>
+                </div>
+            </div>
 
-<div class="mylg:container mylg:mx-auto mx-2 grid grid-cols-2 sm:grid-cols-3 mylg:grid-cols-4 gap-2 grid-flow-row place-items-center pt-6 mylg:pt-12 ease-in-out duration-500 transition-all">
-    <div class="w-full h-full relative"> <img src="public/1.png" class="w-full h-full object-fill " onclick="openFullScreen('public/1.png')"> </div>
-    <div class="w-full h-full relative"> <img src="public/2.jpg" class="w-full h-full object-fill " onclick="openFullScreen('public/2.jpg')"> </div>
-    <div class="w-full h-full relative"> <img src="public/3.jpg" class="w-full h-full object-fill " onclick="openFullScreen('public/3.jpg')"> </div>
-    <div class="w-full h-full relative"> <img src="public/4.jpg" class="w-full h-full object-fill " onclick="openFullScreen('public/4.jpg')"> </div>
-    <div class="w-full h-full relative"> <img src="public/5.jpg" class="w-full h-full object-fill " onclick="openFullScreen('public/5.jpg')"> </div>
-    <div class="w-full h-full relative"> <img src="public/7.jpeg" class="w-full h-full object-fill " onclick="openFullScreen('public/7.jpeg')"> </div>
-    <div class="w-full h-full relative"> <img src="public/8.jpeg" class="w-full h-full object-fill " onclick="openFullScreen('public/8.jpeg')"> </div>
-    <div class="w-full h-full relative"> <img src="public/9.jpg" class="w-full h-full object-fill " onclick="openFullScreen('public/9.jpg')"> </div>
-    <div class="w-full h-full relative"> <img src="public/10.jpg" class="w-full h-full object-fill " onclick="openFullScreen('public/10.jpg')"> </div>
-    <div class="w-full h-full relative"> <img src="public/cover.jpg" class="w-full h-full object-fill " onclick="openFullScreen('public/cover.jpg')"> </div>
-</div>
 
-<div class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-90 z-50 hidden" onclick="closeFullScreen()" id="fullScreenModal">
-  <div class="relative">
-    <span class="absolute top-0 right-0 m-4 text-white cursor-pointer" onclick="closeFullScreen()">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M13.414 10l4.293-4.293a1 1 0 0 0-1.414-1.414L12 8.586 7.707 4.293a1 1 0 0 0-1.414 1.414L10.586 10l-4.293 4.293a1 1 0 1 0 1.414 1.414L12 11.414l4.293 4.293a1 1 0 0 0 1.414-1.414L13.414 10z" clip-rule="evenodd" />
-      </svg>
-    </span>
-    <img src="" alt="Full Screen Image" class="max-w-90 max-h-90">
-  </div>
-</div>
+            <div class="sm:col-span-6">
+                <label for="country" class="block text-lg font-medium leading-6 text-gray-900">Your message</label>
+                <div class="mt-2.5">
+                  <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    
+        <div class="mt-6 flex items-center justify-center gap-x-6">
+        <button type="submit" class="rounded-md bg-logo px-4 py-3 text-xl font-semibold text-white shadow-sm hover:bg-logo2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Submit</button>
+        </div>
+    </form>
+  
+    </div>
+
+
 
 
     <!-- divider -->
     <div class="mydivider"></div>
     <!-- divider -->
 
-
-    <!-- contact section -->
-    <div class="sm:container sm:mx-auto md:flex-row md:items-center md:py-[2%] md:px-[3%] justify-between flex flex-col mx-3 py-[5%] px-[5%] border border-slate-400 rounded-xl shadow-logo shadow-md md:text-lg mylg:text-xl space-y-2 my-6 md:my-10 mylg:my-12">
-        <div class="text-center font-bold text-lg md:text-xl mylg:text-2xl">Get started on your own backyard paradise!</div>
-        <div class="flex flex-col md:flex-row md:space-x-5 md:space-y-0 justify-center font-sans font-semibold text-center space-y-2">
-            <button class="effect border border-slate-600 rounded-xl py-2 px-6 flex items-center justify-center shadow-lg hover:bg-slate-100 transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6 mr-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
-                </svg>                
-                01147005858
-            </button>
-           <a href="quote.html"> <button class="effect border border-slate-600 rounded-xl py-2 px-6 text-white bg-logo border-none shadow-lg hover:bg-logo2 transition-all">Get A Free Quote</button></a>
-        </div>
-    </div>
 
 
     <!-- assosiated with -->
