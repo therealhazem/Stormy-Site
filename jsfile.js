@@ -107,3 +107,6 @@ hambutton.addEventListener("click", () => {
     document.getElementById('fullScreenModal').classList.add('hidden');
     document.body.classList.remove('overflow-hidden'); // Enable scrolling
   }
+
+
+  

@@ -100,14 +100,14 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
 
     <!-- header of the nav bar -->
     <header class="border-b-[2px] border-logo fixed z-50 bg-white w-full">
-        <nav class="2xl:container 2xl:mx-auto mx-4 flex justify-between text-slate-800 h-[65px] md:h-[90px]">
+        <nav class="2xl:container 2xl:mx-auto mx-4 flex justify-between text-slate-800 h-[70px] md:h-[90px]">
             <a href="index.html" class="flex items-center"> <img src="photos/logo2.png" class="w-[160px] sm:w-[250px] sm:min-w-[180px]"> </a>   
             <div class="hidden mylg:flex mylg:items-center 2xl:space-x-6 mylg:mx-2 mylg:space-x-4 font-bold font-sans text-slate-900 text-lg">
-                    <a class="navnormal" href="#">Pools & Spas</a>
+                    <a class="navnormal" href="pools.html">Pools & Spas</a>
                     <a class="navnormal" href="gallery.html">Gallery</a>
                     <a class="navnormal" href="about.html">About Us</a>
                     <a class="navnormal" href="testimonials.html">Testimonials</a>
-                    <a class="navnormal" href="#">Resouces</a>
+                    <!-- <a class="navnormal" href="#">Resouces</a> -->
             </div>
             <div class="hidden mylg:flex justify-between xl:ml-0">
                 <div class="flex items-center text-slate-100 font-sans font-bold px-3 text-lg border border-logo rounded-sm bg-logo effect">
@@ -133,11 +133,11 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
             </div>
         </nav>
         <div id="menu" class="absolute bg-white left-0 right-0 hidden mylg:hidden flex-col items-center justify-center">
-            <a class=" hover:text-white active:bg-logo2 hover:bg-logo w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="#">Pools & Spas</a>
+            <a class=" hover:text-white active:bg-logo2 hover:bg-logo w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="pools.html">Pools & Spas</a>
             <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="gallery.html">Gallery</a>
             <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="about.html">About Us</a>
             <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="testimonials.html">Testimonials</a>
-            <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="#">Resouces</a>
+            <!-- <a class=" hover:text-white hover:bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg md:text-xl" href="#">Resouces</a> -->
             <div class="bg-logo active:bg-logo2 w-full text-center font-semibold transition-all flex justify-center py-4 text-lg text-slate-100">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 mr-2 ease-out duration-300">
                     <path fill-rule="evenodd" d="M19.5 9.75a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 1 1.5 0v2.69l4.72-4.72a.75.75 0 1 1 1.06 1.06L16.06 9h2.69a.75.75 0 0 1 .75.75Z" clip-rule="evenodd" />
@@ -148,7 +148,7 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
     </header>
     
     <!-- hero section -->
-    <div class="relative pt-[65px]">
+    <div class="relative pt-[70px]">
 
         <div class="absolute text-center flex-col flex items-center justify-center w-full h-[68%] sm:h-[75%] space-y-1 sm:space-y-3 mylg:space-y-5">
             <h1 class="text-white text-xl sm:text-3xl font-extrabold mylg:text-6xl mx-1">Bring Your Dream Pool To Life</h1>
@@ -284,7 +284,7 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
             <img class="w-full h-[600px] object-cover rounded-2xl" src="photos/slider1.jpg">
             <div class="rounded-2xl absolute bottom-0 left-0 right-0 px-8 py-4 bg-black bg-opacity-25 text-white flex flex-row justify-between items-center mx-4 my-4">
             <div class="text-2xl font-bold">Symphony</div>
-                <button type="submit" class="effect bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="gallery.html"> Take a Look </a> </button>
+                <button type="submit" class="effect bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="symphony.html"> Take a Look </a> </button>
             </div>
         </div>
         <div class="flex space-x-6 flex-row">
@@ -293,7 +293,7 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
                     <img class="rounded-2xl w-full h-2/5 object-cover" src="photos/Serene-6-in-Bondi-Sand-Toowoomba014-min-scaled.jpg">
                     <div class="rounded-2xl absolute bottom-0 left-0 right-0 px-4 lg:px-8 py-4 bg-black bg-opacity-25 text-white flex flex-row justify-between items-center mx-4 my-4">
                         <div class="text-2xl font-bold">Serene</div>
-                        <button type="submit" class="effect bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="gallery.html" class="flex items-center justify-center space-x-1"> <p>Take a Look</p>
+                        <button type="submit" class="effect bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="serene.html" class="flex items-center justify-center space-x-1"> <p>Take a Look</p>
                             
                         </a> </button>
                     </div>
@@ -304,7 +304,7 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
                     <img class="rounded-2xl w-full h-2/5 object-cover" src="photos/WSH_Grandeur-11_Whitehaven-Pearl-4.jpg">
                     <div class="rounded-2xl absolute bottom-0 left-0 right-0 px-4 lg:px-8 py-4 bg-black bg-opacity-25 text-white flex flex-row justify-between items-center mx-4 my-4">
                         <div class="text-2xl font-bold">Grandeur</div>
-                        <button type="submit" class="effect bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="gallery.html"> Take a Look </a> </button>
+                        <button type="submit" class="effect bg-logo rounded-2xl py-2 px-4 font-bold text-lg hover:bg-logo2 transition-all"> <a href="grandeur.html"> Take a Look </a> </button>
                     </div>
                 </div>
             </div>
@@ -322,7 +322,7 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
                 <div class="slide-content absolute bottom-0 left-0 right-0 xsm:p-4 p-2 text-center text-white">
                     <div class="flex justify-between items-center bg-black bg-opacity-25 rounded-2xl mx-2 px-3 py-2 xsm:px-4 xsm:py-2">
                     <h2 class="text-lg xsm:text-xl font-bold">Symphony</h2>
-                    <button class="bg-logo text-white font-bold py-1 px-2 xsm:py-2 xsm:px-4 rounded-full hover:bg-logo2 transition-all"><a href="gallery.html"> Take a Look </a> </button>
+                    <button class="bg-logo text-white font-bold py-1 px-2 xsm:py-2 xsm:px-4 rounded-full hover:bg-logo2 transition-all"><a href="symphony.html"> Take a Look </a> </button>
                     </div>
                 </div>
                 </div>
@@ -332,7 +332,7 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
                 <div class="slide-content absolute bottom-0 left-0 right-0 xsm:p-4 p-2 text-center text-white">
                     <div class="flex justify-between items-center bg-black bg-opacity-25 rounded-2xl mx-2 px-3 py-2 xsm:px-4 xsm:py-2">
                     <h2 class="text-lg xsm:text-xl font-bold">Serene</h2>
-                    <button class="bg-logo text-white font-bold py-1 px-2 xsm:py-2 xsm:px-4 rounded-full hover:bg-logo2 transition-all"> <a href="gallery.html"> Take a Look </a> </button>
+                    <button class="bg-logo text-white font-bold py-1 px-2 xsm:py-2 xsm:px-4 rounded-full hover:bg-logo2 transition-all"> <a href="serene.html"> Take a Look </a> </button>
                     </div>
                 </div>
                 </div>
@@ -342,7 +342,7 @@ function createButton(obj, pageSimulator) {    const body = document.querySelect
                 <div class="slide-content absolute bottom-0 left-0 right-0 xsm:p-4 p-2 text-center text-white">
                     <div class="flex justify-between items-center bg-black bg-opacity-25 rounded-2xl mx-2 px-3 py-2 xsm:px-4 xsm:py-2">
                     <h2 class="text-lg xsm:text-xl font-bold">Grandeur</h2>
-                    <button class="bg-logo text-white font-bold py-1 px-2 xsm:py-2 xsm:px-4 rounded-full hover:bg-logo2 transition-all"> <a href="gallery.html"> Take a Look </a> </button>
+                    <button class="bg-logo text-white font-bold py-1 px-2 xsm:py-2 xsm:px-4 rounded-full hover:bg-logo2 transition-all"> <a href="grandeur.html"> Take a Look </a> </button>
                     </div>
                 </div>
                 </div>
