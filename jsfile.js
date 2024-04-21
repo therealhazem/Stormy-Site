@@ -110,5 +110,5 @@ hambutton.addEventListener("click", () => {
 
 
   function makeCall() {
-    window.location.href = "01147005858" ; // Replace +1234567890 with the desired phone number
+    window.location.href = "tel:01147005858" ; // Replace +1234567890 with the desired phone number
 }
