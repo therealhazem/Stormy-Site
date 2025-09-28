@@ -325,6 +325,6 @@ We welcome contributions! Please follow these steps:
 
 **🌐 Check my [Portfolio](https://hazemelgindy.me)**
 
-[⭐ Star this repo](https://github.com/therealhazem/stormy-pools-website) • [🐛 Report Bug](https://github.com/therealhazem/stormy-pools-website/issues) • [💡 Request Feature](https://github.com/therealhazem/stormy-pools-website/issues)
+[⭐ Star this repo](https://github.com/therealhazem/stormy-site) • [🐛 Report Bug](https://github.com/therealhazem/stormy-site/issues) • [💡 Request Feature](https://github.com/therealhazem/stormy-site/issues)
 
 </div>
