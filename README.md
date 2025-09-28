@@ -112,7 +112,7 @@ Built with modern web technologies and a focus on user experience, this website 
 ### 🌐 **Try It Live First!**
 
 **Before setting up locally, check out the live demo:**
-👉 **[https://stormy-pools-demo.vercel.app/](https://stormy-pools-demo.vercel.app/)** 👈
+👉 **[https://therealhazem.github.io/Stormy-Site/index.html](https://therealhazem.github.io/Stormy-Site/index.html)** 👈
 
 *See the website in action with all interactive features, galleries, and responsive design!*
 
@@ -282,7 +282,7 @@ The website is a static site and can be deployed to any static hosting service:
 ![About Us](Aboutus.png)
 
 ### Pool Showcase
-![Pool Showcase](Pool.jpg)
+![Pool Showcase](Pools.jpg)
 
 </div>
 
