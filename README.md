@@ -15,9 +15,9 @@ A professional swimming pool company website showcasing premium fibreglass pools
 
 ## 🌐 **LIVE PREVIEW**
 
-[![🚀 View Live Demo](https://img.shields.io/badge/🚀_View_Live_Demo-FF6B6B?style=for-the-badge&logo=vercel&logoColor=white)](https://stormy-pools-demo.vercel.app/)
+[![🚀 View Live Demo](https://img.shields.io/badge/🚀_View_Live_Demo-FF6B6B?style=for-the-badge&logo=vercel&logoColor=white)](https://therealhazem.github.io/Stormy-Site/index.html)
 
-**👉 [https://stormy-pools-demo.vercel.app/](https://stormy-pools-demo.vercel.app/) 👈**
+**👉 [https://therealhazem.github.io/Stormy-Site/index.html](https://therealhazem.github.io/Stormy-Site/index.html) 👈**
 
 *Experience the full website with interactive galleries, pool showcases, and contact features*
 
