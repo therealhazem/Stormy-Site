@@ -282,7 +282,7 @@ The website is a static site and can be deployed to any static hosting service:
 ![About Us](Aboutus.png)
 
 ### Pool Showcase
-![Pool Showcase](Pools.jpg)
+![Pool Showcase](Pool.png)
 
 </div>
 
