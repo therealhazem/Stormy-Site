@@ -273,16 +273,16 @@ The website is a static site and can be deployed to any static hosting service:
 <div align="center">
 
 ### Homepage
-![Homepage](photos/hero2.png)
+![Homepage](photos/Homepage.png)
 
 ### Gallery
-![Gallery](gallery/cover.jpg)
+![Gallery](photos/Gallery.jpg)
 
 ### About Us
-![About Us](about/cover.png)
+![About Us](photos/Aboutus.png)
 
 ### Pool Showcase
-![Pool Showcase](photos/slider1.jpg)
+![Pool Showcase](photos/Pool.jpg)
 
 </div>
 
